@@ -44,7 +44,9 @@ class Reegion_select_ft extends EE_Fieldtype {
 			'provinces' => lang('rs_provinces'),
 			'provinces_states' => lang('rs_provinces_states'),
 			'states_provinces' => lang('rs_states_provinces'),
-			'ukcounties' => lang('rs_ukcounties')
+			'ukcounties' => lang('rs_ukcounties'),
+			'eucountries' => lang('rs_eucountries'),
+			'noneucountries' => lang('rs_noneucountries')
 		);
 	}	
 
@@ -316,6 +318,12 @@ class Reegion_select_ft extends EE_Fieldtype {
 				}
 				$this->regions = $regions;
 				break;				
+			case 'eucountries' :
+				$regions = $eucountries;
+				break;		
+			case 'noneucountries' :
+				$regions = array_diff($countries, $eucountries);
+				break;		
 		}
 	}
 	

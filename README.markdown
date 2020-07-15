@@ -4,6 +4,8 @@ REEgion Select is an addon for ExpressionEngine&reg; 2, 3, and 4 that displays d
 - U.S. states (based on the USPS official list of U.S. states and possessions)
 - Canadian provinces and territories
 - UK counties
+- EU Countries
+- Non-EU Countries
 - Canadian provinces and U.S. states together (or U.S. States and Canadian provinces together)
 
 ## Fieldtype Usage
@@ -33,6 +35,10 @@ Use the following EE tags to generate each type of dropdown `<select>` menu in y
 `{exp:reegion_select:provinces}`
 
 `{exp:reegion_select:ukcounties}`
+
+`{exp:reegion_select:eucountries}`
+
+`{exp:reegion_select:noneucountries}`
 
 `{exp:reegion_select:provinces_states}`
 

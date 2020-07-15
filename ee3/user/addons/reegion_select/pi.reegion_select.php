@@ -115,7 +115,13 @@ class Reegion_select {
 				break;
 			case 'ukcounties' :
 				$regions = $ukcounties;
-				break;				
+				break;		
+			case 'eucountries' :
+				$regions = $eucountries;
+				break;		
+			case 'noneucountries' :
+				$regions = array_diff($countries, $eucountries);
+				break;			
 		}
 			
 		foreach($regions as $k => $label)
@@ -174,7 +180,7 @@ class Reegion_select {
 					$options[$val] = $label;
 					$vars[$i]['region_name'] = $label;
 					$vars[$i]['region_alpha2'] = ($list == 'ukcounties') ? '' : $k;
-					$vars[$i]['region_alpha3'] = ($list == 'countries') ? $countries_alpha3[$k] : '';
+					$vars[$i]['region_alpha3'] = ($list == 'countries' || $list == 'eucountries' || $list == 'noneucountries') ? $countries_alpha3[$k] : '';
 					$i++;
 				}
 			}
@@ -191,6 +197,17 @@ class Reegion_select {
 		return $this->_display('countries','country');
 	}
 
+	
+	function eucountries()
+	{
+		return $this->_display('eucountries','eucountry');
+	}
+	
+	function noneucountries()
+	{
+		return $this->_display('noneucountries','noneucountry');
+	}
+	
 	
 	function states()
 	{

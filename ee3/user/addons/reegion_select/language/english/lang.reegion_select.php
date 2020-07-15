@@ -15,5 +15,7 @@ $lang = array(
 	'rs_province' => 'Province',
 	'rs_county' => 'County',
 	'rs_province_state' => 'Province or State',
-	'rs_state_province' => 'State or Province'
+	'rs_state_province' => 'State or Province',
+	'rs_eucountries' => 'EU Countries',
+	'rs_noneucountries' => 'Non-EU Countries'
 );
